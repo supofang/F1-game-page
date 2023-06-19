@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+  <meta content='width=device-width, initial-scale=1' name='viewport'>
+  <title>f1-game-page</title>
+  <link href='stylesheets/all.css' media='screen' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <main class="play">
+    <!-- 側欄開關按扭 -->
+    <div class="draggie">
+      <button class="btn draggie-btn" type="button" data-bs-target="#gameContent"></button>
+    </div>
+
+    <!-- 展開內容 -->
+    <div class="game-content offcanvas offcanvas-end" id="gameContent">
+      <button type="button" class="btn btn-close-offcanvas" data-bs-dismiss="offcanvas"><i
+          class="fa-solid fa-xmark fa-xl"></i></button>
+      <div class="offcanvas-header">
+        <a href="https://www.freetop1.com/" class="logo-gamepage"><img src="images/f1-icon.svg" alt=""></a>
+        <nav class="nav nav-icon">
+          <!-- <a class="nav-link" href="#"><i class="fa-solid fa-house-chimney-window"></i></a> -->
+          <a class="nav-link" id="fullscreen"><i class="fa-solid fa-maximize"></i></a>
+          <a class="nav-link iframe-btn" id="news" data-bs-toggle="modal" data-bs-target="#iframeModal" data-src="https://www.freetop1.com/news?game_id=111">
+            <i class="fa-solid fa-bullhorn"></i>
+          </a>
+          <a class="nav-link" href="https://line.me/R/ti/p/%40245oijxx" target="_blank"><i class="fa-brands fa-line"></i></a>
+        </nav>
+        <div class="user">
+          <div class="user-img">
+            <!-- 登入後照片 -->
+            <img src="https://picsum.photos/id/787/500/500" alt="">
+          </div>
+          <div class="user-data ms-3">
+            <h5>1679644631737</h5>
+            <p class="text-secondary">登入來源：遊客帳號
+              <a href="https://www.freetop1.com/privacy" target="_blank"><i class="fa-solid fa-shield-halved"></i></a>
+            </p>
+            <nav class="nav nav-fill mt-2">
+              <a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="fa-solid fa-right-to-bracket me-1"></i>綁定登入
+              </a>
+              <a class="btn btn-outline-primary ms-1 iframe-btn" data-bs-toggle="modal" data-bs-target="#iframeModal" data-src="https://www.freetop1.com/profileiframepc?u=1679644631737">
+                <i class="fa-solid fa-users me-1"></i>帳號管理
+              </a>
+            </nav>
+          </div>
+          <div class="user-pay">
+            <p>
+              <i class="fa-solid fa-coins me-2"></i>紅利點數：
+              <b class="text-primary mx-2">0</b>PT
+            </p>
+            <a href="https://www.freetop1.com/buy_bonus.php" target="_blank" class="btn btn-primary ms-auto">
+              <i class="fa-solid fa-circle-dollar-to-slot me-1"></i>儲值
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas-body tab-content">
+        <div class="tab-pane fade show active" id="gameList">
+          <a class="game-list" href="">
+            <img src="images/icon-128.png" alt="">
+            <div class="game-list-intro">
+              <p>新沙城傳說
+                <span class="badge rounded-pill">GM特權</span>
+                <span class="badge rounded-pill">幻獸養成</span>
+                <span class="badge rounded-pill">神域激戰</span>
+              </p>
+              <small>一樣經典，不同體驗，全新的傳奇盛宴</small>
+            </div>
+          </a>
+          <a class="game-list" href="">
+            <img src="images/icon-128-111.png" alt="">
+            <div class="game-list-intro">
+              <p>億萬富豪
+                <span class="badge rounded-pill">模擬經營</span>
+                <span class="badge rounded-pill">美女秘書</span>
+                <span class="badge rounded-pill">商場達人</span>
+              </p>
+              <small>小職員如何變大總裁？ 性感秘書來教你</small>
+            </div>
+          </a>
+          <a class="game-list" href="">
+            <img src="images/icon-512-82.jpg" alt="">
+            <div class="game-list-intro">
+              <p>笑傲唐門
+                <span class="badge rounded-pill">MMORPG</span>
+                <span class="badge rounded-pill">武俠</span>
+                <span class="badge rounded-pill">競技</span>
+                <span class="badge rounded-pill">橫屏</span>
+                <span class="badge rounded-pill">唯美</span>
+              </p>
+              <small>暢快打擊，即時PK刀光劍影</small>
+            </div>
+          </a>
+          <a class="game-list" href="">
+            <img src="images/icon-128.png" alt="">
+            <div class="game-list-intro">
+              <p>新沙城傳說
+                <span class="badge rounded-pill">GM特權</span>
+                <span class="badge rounded-pill">幻獸養成</span>
+                <span class="badge rounded-pill">神域激戰</span>
+              </p>
+              <small>一樣經典，不同體驗，全新的傳奇盛宴</small>
+            </div>
+          </a>
+          <a class="game-list" href="">
+            <img src="images/icon-128-111.png" alt="">
+            <div class="game-list-intro">
+              <p>億萬富豪
+                <span class="badge rounded-pill">模擬經營</span>
+                <span class="badge rounded-pill">美女秘書</span>
+                <span class="badge rounded-pill">商場達人</span>
+              </p>
+              <small>小職員如何變大總裁？ 性感秘書來教你</small>
+            </div>
+          </a>
+          <a class="game-list" href="">
+            <img src="images/icon-512-82.jpg" alt="">
+            <div class="game-list-intro">
+              <p>笑傲唐門
+                <span class="badge rounded-pill">MMORPG</span>
+                <span class="badge rounded-pill">武俠</span>
+                <span class="badge rounded-pill">競技</span>
+                <span class="badge rounded-pill">橫屏</span>
+                <span class="badge rounded-pill">唯美</span>
+              </p>
+              <small>暢快打擊，即時PK刀光劍影</small>
+            </div>
+          </a>
+        </div>
+        <div class="tab-pane fade" id="gameGift">
+          <dl class="game-gift">
+            <dd>
+              <p>
+                <span class="badge rounded-pill bg-secondary">普通</span>
+                <b>新手禮包</b>
+                <small class="text-secondary">抽獎券x15</small>
+              </p>
+              <button class="btn btn-sm btn-outline-primary btnOpen">領取</button>
+            </dd>
+            <dd class="gift-number d-none">
+              <p>2R6BCRSEAUZ8-1</p>
+              <button class="btn btn-sm btn-outline-primary">複製序號</button>
+            </dd>
+          </dl>
+          <dl class="game-gift">
+            <dd>
+              <p>
+                <span class="badge rounded-pill bg-secondary">累積登入</span>
+                <b>登入豪禮 (登入2日可領)</b>
+                <small class="text-secondary">美女合同碎片x5、抽獎券x50</small>
+              </p>
+              <button class="btn btn-sm btn-outline-primary btnOpen">領取</button>
+            </dd>
+            <dd class="gift-number d-none">
+              <p>2R6BCRSEAUZ8-2</p>
+              <button class="btn btn-sm btn-outline-primary">複製序號</button>
+            </dd>
+          </dl>
+          <dl class="game-gift">
+            <dd>
+              <p>
+                <span class="badge rounded-pill bg-secondary">帳號綁定</span>
+                <b>儲小額領大禮 (2022-06-10 10:00~2022-06-30 23:59期間累積儲值99元可領)</b>
+                <small class="text-secondary">美女合同碎片x5、抽獎券x50、羽毛x20、淬煉精金x10、經脈丹x10、龍印碎片x10</small>
+              </p>
+              <!-- <button class="btn btn-sm btn-outline-primary btnOpen">領取</button> -->
+              <button class="btn btn-sm btn-outline-secondary" disabled>已儲值100元</button>
+            </dd>
+            <dd class="gift-number d-none">
+              <p>2R6BCRSEAUZ8</p>
+              <button class="btn btn-sm btn-outline-primary">複製序號</button>
+            </dd>
+          </dl>
+        </div>
+        <div class="tab-pane fade" id="gameServer">
+          <a class="game-list" href="">
+            <img src="images/icon-512-82.jpg" alt="">
+            <div class="game-list-intro">
+              <p>笑傲唐門 <span class="badge bg-dark">伺服器名稱01</span></p>
+              <small>2022-03-28 09:50</small>
+            </div>
+            <div class="ms-auto p-2">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+          </a>
+          <a class="game-list" href="">
+            <img src="images/icon-512-82.jpg" alt="">
+            <div class="game-list-intro">
+              <p>笑傲唐門 <span class="badge bg-dark">伺服器名稱01</span></p>
+              <small>2022-03-28 09:50</small>
+            </div>
+            <div class="ms-auto p-2">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+          </a>
+          <a class="game-list" href="">
+            <img src="images/icon-512-82.jpg" alt="">
+            <div class="game-list-intro">
+              <p>笑傲唐門 <span class="badge bg-dark">伺服器名稱01</span></p>
+              <small>2022-03-28 09:50</small>
+            </div>
+            <div class="ms-auto p-2">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="offcanvas-footer p-3">
+        <nav class="nav nav-pills nav-fill">
+          <a class="nav-link" href="#" data-bs-toggle="pill" data-bs-target="#gameGift">
+            <i class="fa-solid fa-gift me-1"></i>
+          </a>
+          <a class="nav-link active" href="#" data-bs-toggle="pill" data-bs-target="#gameList">
+            <i class="fa-solid fa-gamepad me-1"></i>
+          </a>
+          <a class="nav-link" href="#" data-bs-toggle="pill" data-bs-target="#gameServer">
+            <i class="fa-solid fa-server"></i>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- 遊戲放這 -->
+    <div class="play-main">
+
+    </div>
+
+    <!-- Modal -->
+
+    <!-- iframe 共用Modal -->
+    <!-- 連結設定在<a> data-src="" 裡 -->
+    <div class="modal fade" id="iframeModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content" style="height: calc(100% - 2rem); max-height: 700px;" >
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="ratio h-100">
+              <iframe src="" id="iframePage" scrolling="auto"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 登入綁定 Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="login-modal">
+              <img src="images/loginModal/banner.jpg" alt="">
+              <nav>
+                <a href="#" class="btn btn-line">立即綁定</a>
+                <a href="#" class="btn btn-google">立即綁定</a>
+                <a href="#" class="btn btn-fb">立即綁定</a>
+                <a href="#" class="btn btn-meta">MetaMask區塊鏈錢包 立即綁定</a>
+              </nav>
+              <p>※PC電腦：此登入方式，需先於瀏覽器安裝MetaMask官方插件。</p>
+              <p>※手機：需在MetaMask官方APP內置瀏覽器中開啟F1遊戲官網</p>
+              <p><a href="#">FB立即綁定(建議同時綁定Google)</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="javascripts/vendor.js"></script>
+  <script src="javascripts/script.js"></script>
+</body>
+
+</html>
